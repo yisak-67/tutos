@@ -9,6 +9,7 @@ import Container from "./Container";
 import { FaChevronDown } from "react-icons/fa";
 import { config } from "../config";
 import { getData } from "../lib";
+import { logo } from "../assets";
 
 
 const bottomNavigation = [
@@ -40,8 +41,15 @@ function Header() {
   return (
     <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
-        <Link to={"/"}>
+        <Link to={"/"} className="flex justify-between ">
+        <img
+                        src={logo}
+                        alt="categoryImage"
+                        className="w-9 h-6 rounded-md"
+                      />
+          
           <p>FYZ</p>
+   
         </Link>
         <div className="hidden md:inline-flex max-w-3xl w-full relative">
           <input
