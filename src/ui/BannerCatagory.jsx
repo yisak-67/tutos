@@ -26,6 +26,13 @@ const responsive = {
   },
 };
 
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * A carousel component that displays a list of categories as links.
+ *
+ * @returns A Carousel component with category links
+ */
+/******  1090c4e0-3618-465f-9df3-038ec92774e1  *******/
 const BannerCategories = () => {
   const [categories, setCategories] = useState([]);
 
@@ -34,7 +41,6 @@ const BannerCategories = () => {
       const endpoint = `${config?.baseUrl}/categories`;
       try {
         const data = await getData(endpoint);
-        console.log(data);
         setCategories(data);
       } catch (error) {
         console.error("Error fetching data", error);
@@ -48,7 +54,7 @@ const BannerCategories = () => {
       responsive={responsive}
       infinite={true}
       autoPlay={true}
-      transitionDuration={6000}
+      transitionDuration={1000}
       className="flex flex-row p-4 max-w-screen-xl mx-auto lg:px-0 relative"
       customRightArrow={<CustomRightArrow />}
       customLeftArrow={<CustomLeftArrow />}
@@ -64,7 +70,7 @@ const BannerCategories = () => {
             alt="categoryImage"
             className="w-10 h-10 rounded-full object-cover"
           />
-          <p className="text-sm font-semibold"> {item?.name}</p>
+          <p className="text-sm font-semibold">{item?.name}</p>
         </Link>
       ))}
     </Carousel>

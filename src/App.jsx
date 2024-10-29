@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "react-multi-carousel/lib/styles.css";
 import Header from './ui/Header'
 import BannerCategories from './ui/BAnnerCatagory'
+import HomeBanner from './ui/HomeBanner';
+import Hightlight from './ui/Hightlight';
 
 
 
@@ -14,6 +14,9 @@ function App() {
     <main>
 
 <BannerCategories /> 
+<HomeBanner />
+<Hightlight />
+
 
     </main>
   
