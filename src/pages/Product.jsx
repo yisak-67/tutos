@@ -1,4 +1,9 @@
+
 import React, { useEffect, useState } from "react";
+import { getData } from "../lib";
+
+import { config } from "../config";
+import { IoIosArrowBack } from "react-icons/io";
 
 import Loading from "../ui/Loading";
 import Container from "../ui/Container";
@@ -13,7 +18,7 @@ import AddToCartBtn from "../ui/AddToCartBtn";
 // import ProductCard from "../ui/ProductCard";
 // import productPayment from "./assets/productPayment.png";
 import _ from "lodash";
-import { config } from "../config";
+
 
 function Product() {
   const [productData, setProductData] = useState([]);
