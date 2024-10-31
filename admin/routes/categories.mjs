@@ -7,6 +7,7 @@ router.get("/categories", (req, res) => {
   res.send(categories);
 });
 
+
 router.get("/categories/:id", (req, res) => {
   const id = req.params.id;
   const matchedProducts = products?.filter((item) => item?._base === id);
